@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Weight On Other World</string>
+    <string name="descriptionOfGravity">"We often use the terms "mass" and "weight" interchangeably in our daily speech, but to an astronomer or a physicist they are completely different things. The mass of a body is a measure of how much matter it contains. An object with mass has a quality called inertia. If you shake an object like a stone in your hand, you would notice that it takes a push to get it moving, and another push to stop it again. If the stone is at rest, it wants to remain at rest. Once you\'ve got it moving, it wants to stay moving. This quality or \"sluggishness\" of matter is its inertia. Mass is a measure of how much inertia an object displays.
+Weight is an entirely different thing. Every object in the universe with mass attracts every other object with mass. The amount of attraction depends on the size of the masses and how far apart they are. For everyday-sized objects, this gravitational pull is vanishingly small, but the pull between a very large object, like the Earth, and another object, like you, can be easily measured. How? All you have to do is stand on a scale! Scales measure the force of attraction between you and the Earth. This force of attraction between you and the Earth (or any other planet) is called your weight. If you are in a spaceship far between the stars and you put a scale underneath you, the scale would read zero. Your weight is zero. You are weightless. There is an anvil floating next to you. It's also weightless. Are you or the anvil mass-less? Absolutely not. If you grabbed the anvil and tried to shake it, you would have to push it to get it going and pull it to get it to stop. It still has inertia, and hence mass, yet it has no weight. "</string>
+
+
+    <string name="headerText">"YOUR WEIGHT ON OTHER WORLDS Ever wonder what you might weight on Mars or The Moon? Here's your chance to find out."</string>
+
+    <string name="planets">The Planets</string>
+    <string name="sample_text">Sample Text for App</string>
+    <string name="hint">Enter your weight in KG</string>
+    <string name="calculate">Calculate</string>
+
+    <string name="mercury">Mercury</string>
+    <string name="venus">Venus</string>
+    <string name="moon">Moon</string>
+    <string name="mars">Mars</string>
+    <string name="saturn">Saturn</string>
+    <string name="jupiter">Jupiter</string>
+    <string name="uranus">Uranus</string>
+    <string name="neptune">Neptune</string>
+    <string name="pluto">Pluto</string>
+
+    <string name="moons_jupiter">The Moons of Jupiter</string>
+    <string name="io">IO</string>
+    <string name="europa">Europa</string>
+    <string name="ganymede">Ganymede</string>
+    <string name="callisto">Callisto</string>
+
+    <string name="stars">Weight on Sun</string>
+    <string name="sun">Sun</string>
+    <string name="white_draft">White Draft</string>
+    <string name="neutron_start">Neutron Star</string>
+
+    <string name="mercury_weight">Weight on Mercury</string>
+    <string name="venus_weight">Weight on Venus</string>
+    <string name="moon_weight">Weight on Moon</string>
+    <string name="mars_weight">Weight on Mars</string>
+    <string name="saturn_weight">Weight on Saturn</string>
+    <string name="jupiter_weight">Weight on Jupiter</string>
+    <string name="uranus_weight">Weight on Uranus</string>
+    <string name="neptune_weight">Weight on Neptune</string>
+    <string name="pluto_weight">Weight on Pluto</string>
+    <string name="io_weight">Weight on IO</string>
+    <string name="europa_weight">Weight on Europa</string>
+    <string name="ganymede_weight">Weight on Ganymede</string>
+    <string name="callisto_weight">Weight on Callisto</string>
+    <string name="sun_weight">Weight on Sun</string>
+    <string name="white_weight">Weight on White Draft</string>
+    <string name="neutron_weight">Weight on Neutron</string>
+    <string name="title_activity_about">About</string>
+
+    <string name="me">App By Prathamesh More</string>
+    <string name="app_ver">1.0 V</string>
+    <string name="aboutButton">About</string>
+    <string name="facebook">Facebook</string>
+    <string name="share">Tell Your Friend</string>
+
+</resources>

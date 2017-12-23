@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/galaxy"
+    tools:context="com.prathameshmore.weightonotherworld.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_all"
+        tools:ignore="UselessParent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/headerText"
+                android:textSize="18sp"
+                android:fontFamily="casual"
+                android:typeface="normal"
+                android:textColor="@color/white_text"
+                android:textAlignment="center"
+                android:textStyle="normal|bold"
+                tools:ignore="UnusedAttribute" />
+
+            <EditText
+                android:id="@+id/weightEdit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_size"
+                android:layout_gravity="center"
+                android:hint="@string/hint"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:background="@drawable/curve"
+                android:backgroundTint="@color/white_text"
+                android:layout_marginTop="@dimen/small_margin"
+                android:inputType="number"
+                android:fontFamily="casual"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:maxLines="1"
+                tools:ignore="UnusedAttribute" />
+
+            <Button
+                android:id="@+id/btnCal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button"
+                android:text="@string/calculate"
+                android:textColor="@color/white_text"
+                android:backgroundTint="@color/colorPrimary"
+                android:background="@drawable/curve"
+                android:layout_marginTop="@dimen/small_margin"
+                android:fontFamily="casual"
+                android:textSize="22sp"
+                android:textStyle="normal|bold"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/planets"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:fontFamily="casual"
+                android:typeface="normal"
+                android:textColor="@color/white_text"
+                tools:ignore="UnusedAttribute"
+                android:textStyle="normal|bold"
+                android:layout_marginTop="@dimen/small_margin" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/small_margin"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/mercury"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mercury"
+                            android:typeface="normal"
+                            android:textColor="@color/white_text"
+                            android:textAlignment="center"
+                            android:textStyle="normal|bold|italic"
+                            android:fontFamily="casual"
+                            android:textSize="16sp"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/setMercuryText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/mercury_weight"
+                        android:fontFamily="casual"
+                        android:typeface="normal"
+                        android:textColor="@color/white_text"
+                        tools:ignore="UnusedAttribute"
+                        android:textStyle="normal|bold"
+                        android:layout_marginTop="@dimen/padding_sub_text" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/venus"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/venus"
+                            android:typeface="normal"
+                            android:textColor="@color/white_text"
+                            android:textAlignment="center"
+                            android:textStyle="normal|bold|italic"
+                            android:fontFamily="casual"
+                            android:textSize="16sp"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/setVenusText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/venus_weight"
+                        android:fontFamily="casual"
+                        android:typeface="normal"
+                        android:textColor="@color/white_text"
+                        tools:ignore="UnusedAttribute"
+                        android:textStyle="normal|bold"
+                        android:layout_marginTop="@dimen/padding_sub_text" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/moon"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/moon"
+                            android:typeface="normal"
+                            android:textColor="@color/white_text"
+                            android:textAlignment="center"
+                            android:textStyle="normal|bold|italic"
+                            android:fontFamily="casual"
+                            android:textSize="16sp"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/setMoonText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/moon_weight"
+                        android:fontFamily="casual"
+                        android:typeface="normal"
+                        android:textColor="@color/white_text"
+                        tools:ignore="UnusedAttribute"
+                        android:textStyle="normal|bold"
+                        android:layout_marginTop="@dimen/padding_sub_text" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/mars"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mars"
+                            android:typeface="normal"
+                            android:textColor="@color/white_text"
+                            android:textAlignment="center"
+                            android:textStyle="normal|bold|italic"
+                            android:fontFamily="casual"
+                            android:textSize="16sp"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/setMarsText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/mars_weight"
+                        android:fontFamily="casual"
+                        android:typeface="normal"
+                        android:textColor="@color/white_text"
+                        tools:ignore="UnusedAttribute"
+                        android:textStyle="normal|bold"
+                        android:layout_marginTop="@dimen/padding_sub_text" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/saturn"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/saturn"
+                            android:typeface="normal"
+                            android:textColor="@color/white_text"
+                            android:textAlignment="center"
+                            android:textStyle="normal|bold|italic"
+                            android:fontFamily="casual"
+                            android:textSize="16sp"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/setSaturnText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/saturn_weight"
+                        android:fontFamily="casual"
+                        android:typeface="normal"
+                        android:textColor="@color/white_text"
+                        tools:ignore="UnusedAttribute"
+                        android:textStyle="normal|bold"
+                        android:layout_marginTop="@dimen/padding_sub_text" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/jupiter"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/jupiter"
+                            android:typeface="normal"
+                            android:textColor="@color/white_text"
+                            android:textAlignment="center"
+                            android:textStyle="normal|bold|italic"
+                            android:fontFamily="casual"
+                            android:textSize="16sp"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/setJupiterText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/jupiter_weight"
+                        android:fontFamily="casual"
+                        android:typeface="normal"
+                        android:textColor="@color/white_text"
+                        tools:ignore="UnusedAttribute"
+                        android:textStyle="normal|bold"
+                        android:layout_marginTop="@dimen/padding_sub_text" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/uranus"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/uranus"
+                            android:typeface="normal"
+                            android:textColor="@color/white_text"
+                            android:textAlignment="center"
+                            android:textStyle="normal|bold|italic"
+                            android:fontFamily="casual"
+                            android:textSize="16sp"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/setUranusText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/uranus_weight"
+                        android:fontFamily="casual"
+                        android:typeface="normal"
+                        android:textColor="@color/white_text"
+                        tools:ignore="UnusedAttribute"
+                        android:textStyle="normal|bold"
+                        android:layout_marginTop="@dimen/padding_sub_text" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/neptune"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/neptune"
+                            android:typeface="normal"
+                            android:textColor="@color/white_text"
+                            android:textAlignment="center"
+                            android:textStyle="normal|bold|italic"
+                            android:fontFamily="casual"
+                            android:textSize="16sp"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/setNeptuneText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/neptune_weight"
+                        android:fontFamily="casual"
+                        android:typeface="normal"
+                        android:textColor="@color/white_text"
+                        tools:ignore="UnusedAttribute"
+                        android:textStyle="normal|bold"
+                        android:layout_marginTop="@dimen/padding_sub_text" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/moons_jupiter"
+                android:textAlignment="center"
+                android:textSize="@dimen/subtext_size"
+                android:fontFamily="casual"
+                android:typeface="normal"
+                android:textColor="@color/white_text"
+                tools:ignore="UnusedAttribute"
+                android:textStyle="normal|bold"
+                android:layout_marginTop="@dimen/small_margin" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/io"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/io"
+                            android:typeface="normal"
+                            android:textColor="@color/white_text"
+                            android:textAlignment="center"
+                            android:textStyle="normal|bold|italic"
+                            android:fontFamily="casual"
+                            android:textSize="16sp"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/setIOText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/io_weight"
+                        android:fontFamily="casual"
+                        android:typeface="normal"
+                        android:textColor="@color/white_text"
+                        tools:ignore="UnusedAttribute"
+                        android:textStyle="normal|bold"
+                        android:layout_marginTop="@dimen/padding_sub_text" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    tools:ignore="TooManyViews">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/europa"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/europa"
+                            android:typeface="normal"
+                            android:textColor="@color/white_text"
+                            android:textAlignment="center"
+                            android:textStyle="normal|bold|italic"
+                            android:fontFamily="casual"
+                            android:textSize="16sp"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/setEuropaText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/europa_weight"
+                        android:fontFamily="casual"
+                        android:typeface="normal"
+                        android:textColor="@color/white_text"
+                        tools:ignore="UnusedAttribute"
+                        android:textStyle="normal|bold"
+                        android:layout_marginTop="@dimen/padding_sub_text" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    tools:ignore="TooManyViews">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/ganymede"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ganymede"
+                            android:typeface="normal"
+                            android:textColor="@color/white_text"
+                            android:textAlignment="center"
+                            android:textStyle="normal|bold|italic"
+                            android:fontFamily="casual"
+                            android:textSize="16sp"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/setGanymedeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/ganymede_weight"
+                        android:fontFamily="casual"
+                        android:typeface="normal"
+                        android:textColor="@color/white_text"
+                        tools:ignore="UnusedAttribute"
+                        android:textStyle="normal|bold"
+                        android:layout_marginTop="@dimen/padding_sub_text" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/callisto"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/callisto"
+                            android:typeface="normal"
+                            android:textColor="@color/white_text"
+                            android:textAlignment="center"
+                            android:textStyle="normal|bold|italic"
+                            android:fontFamily="casual"
+                            android:textSize="16sp"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/setCallistoText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/callisto_weight"
+                        android:fontFamily="casual"
+                        android:typeface="normal"
+                        android:textColor="@color/white_text"
+                        tools:ignore="UnusedAttribute"
+                        android:textStyle="normal|bold"
+                        android:layout_marginTop="@dimen/padding_sub_text" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/stars"
+                android:textAlignment="center"
+                android:textSize="@dimen/subtext_size"
+                android:fontFamily="casual"
+                android:typeface="normal"
+                android:textColor="@color/white_text"
+                tools:ignore="UnusedAttribute"
+                android:textStyle="normal|bold"
+                android:layout_marginTop="@dimen/small_margin" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/small_margin"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/sun"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sun"
+                            android:typeface="normal"
+                            android:textColor="@color/white_text"
+                            android:textAlignment="center"
+                            android:textStyle="normal|bold|italic"
+                            android:fontFamily="casual"
+                            android:textSize="16sp"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/setSunText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:text="@string/sun_weight"
+                        android:fontFamily="casual"
+                        android:typeface="normal"
+                        android:textColor="@color/white_text"
+                        tools:ignore="UnusedAttribute"
+                        android:textStyle="normal|bold"
+                        android:layout_marginTop="@dimen/padding_sub_text" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAbout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button"
+                android:text="@string/aboutButton"
+                android:textColor="@color/white_text"
+                android:backgroundTint="@color/colorPrimary"
+                android:background="@drawable/curve"
+                android:layout_marginTop="@dimen/small_margin"
+                android:fontFamily="casual"
+                android:textSize="22sp"
+                android:textStyle="normal|bold"
+                tools:ignore="UnusedAttribute" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
